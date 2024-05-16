@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar"
 
 function App() {
+  const [americanLeague, setAmericanLeague] = useState([])
+  const [nationalLeague, setNationalLeague] = useState([])
+
+  useEffect(()=> {
+    fetch("http://localhost:3000/american-league")
+    .then((r) => r.json())
+    .then((americanTeams) => setAmericanLeague(americanTeams))
+    .catch(error => console.log(error))
+  },[])
+
+  useEffect(()=> {
+    fetch("http://localhost:3000/national-league")
+    .then((r) => r.json())
+    .then((nationalTeams) => setNationalLeague(nationalTeams))
+    .catch(error => console.log(error))
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <header>
+        <Navbar />
+      </header> 
+      <Outlet context={{americanLeague:{americanLeague}, nationalLeague:{nationalLeague}}}/>
+    </>
   );
 }
 
