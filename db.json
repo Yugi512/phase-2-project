@@ -1,0 +1,66 @@
+{
+    "american-league" : [
+        {   
+            "id": 1,
+            "name": "Baltimore Orioles",
+            "wins": "27 wins",
+            "loss": "14 losses"
+        },
+        {   
+            "id": 2,
+            "name": "New York Yankees",
+            "wins": "28 wins",
+            "loss": "15 losses"
+        },
+        {   
+            "id": 3,
+            "name": "Cleveland Guardians",
+            "wins": "27 wins",
+            "loss": "16 losses"
+        },
+        {   
+            "id": 4,
+            "name": "Minnesota Twins",
+            "wins": "24 wins",
+            "loss": "17 losses"
+        },
+        {   
+            "id": 5,
+            "name": "Kansas City Royals",
+            "wins": "26 wins",
+            "loss": "19 losses"
+        } 
+    ],
+    "national-league" : [
+        {   
+            "id": 1,
+            "name": "Philadelphia Phillies",
+            "wins": "30 wins",
+            "loss": "13 losses"
+        },
+        {   
+            "id": 2,
+            "name": "Los Angeles Dodgers",
+            "wins": "29 wins",
+            "loss": "15 losses"
+        },
+        {   
+            "id": 3,
+            "name": "Atlanta Braves",
+            "wins": "26 wins",
+            "loss": "13 losses"
+        },
+        {   
+            "id": 4,
+            "name": "Milwaukee Brewers",
+            "wins": "26 wins",
+            "loss": "17 losses"
+        },
+        {   
+            "id": 5,
+            "name": "Chicago Cubs",
+            "wins": "24 wins",
+            "loss": "19 losses"
+        }
+    ]
+}
