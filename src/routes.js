@@ -1,25 +1,17 @@
-import AmericanLeague from "./AmericanLeague";
 import App from "./App";
 import Home from "./Home";
-import NationalLeague from "./NationalLeague";
+import ErrorPage from "./ErrorPage";
 
 const routes = [
     {
         path:"/",
         element: <App />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path:"/",
                 element:<Home />
             },
-            {
-                path:"/american-league",
-                element: <AmericanLeague />
-            },
-            {
-                path:"/national-league",
-                element: <NationalLeague />
-            }
         ]
     }
 ]

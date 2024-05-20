@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
-
+import { useOutletContext } from "react-router-dom";
+import  "./style.css" 
 
 function Home(){
 
+
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="home">
+            <h1 id="homepagetext">Home Page</h1>
+            <main>
+            </main>
         </div>
     )
 }
