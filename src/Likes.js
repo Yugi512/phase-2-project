@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Likes({likes, id, url}){
+function Likes({likes, id, url, updateStates}){
     const [like, setLike] = useState(likes)
 
     function likeButton(){
@@ -21,6 +21,9 @@ function Likes({likes, id, url}){
             likes: (like),
             })
         })
+        .then((r) => r.json())
+        .then((updatedCharacter) => updateStates(updatedCharacter))
+        .catch((error) => console.log(error))
     },[like])
 
     return (
