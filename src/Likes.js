@@ -5,13 +5,6 @@ function Likes({likes, id, url, updateStates}){
 
     function likeButton(){
         setLike(like + 1)
-    }
-    function disLikeButton(){
-        setLike(like - 1)
-    }
-
-    
-    useEffect(() => {
         fetch(`${url}/${id}`,{
             method: "PATCH",
             headers: {
@@ -24,7 +17,25 @@ function Likes({likes, id, url, updateStates}){
         .then((r) => r.json())
         .then((updatedCharacter) => updateStates(updatedCharacter))
         .catch((error) => console.log(error))
-    },[like])
+    }
+
+
+    function disLikeButton(){
+        setLike(like - 1)
+        fetch(`${url}/${id}`,{
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+            likes: (like),
+            })
+        })
+        .then((r) => r.json())
+        .then((updatedCharacter) => updateStates(updatedCharacter))
+        .catch((error) => console.log(error))
+    }
+
 
     return (
         <div className="likes"> 

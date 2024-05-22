@@ -1,23 +1,17 @@
-import { useOutletContext, useParams } from "react-router-dom";
+import { useOutletContext, } from "react-router-dom";
 import Form from "./Form";
+import CharacterCard from "./CharacterCard";
 
 function TTIGRAAS(){
-    const { ttigraas, setRimu, url3 } = useOutletContext() 
+    const { ttigraas, setRimu, url3, updateRimLikes } = useOutletContext() 
     
-
-    const characterCards = ttigraas.map((character, index) => <div className="card" id={index} key={index}>
-        <img className="cc" src={character.imgurl} ></img>
-        <h2>{character.name}</h2>
-    </div>
-    )
-
     return (
         <div >
             
             <div> 
                 <h1 className="title"> That Time I Got Reincarnated As A Slime Characters </h1>
                 <Form url={url3} setArray={setRimu}/>
-                {characterCards}
+                <CharacterCard characterList={ttigraas} updateState={updateRimLikes} urls={url3}/>
             </div>
         </div>
     )
