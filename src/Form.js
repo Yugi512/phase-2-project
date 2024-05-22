@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 function Form({url, setArray}){
     const [newCharacter, setCharacter] = useState({
         name: "",
-        imgurl: ""
+        imgurl: "",
+        likes: 0
     });
     console.log(url)
 
