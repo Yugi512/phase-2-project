@@ -41,13 +41,38 @@ function setRimu(character){
   setRimuru([...rimuru,character])
 }
 
+function updateOPLikes(updatedCharacter){
+  const newArray = onePiece.map((character) => {
+    if(character.id === updatedCharacter.id){
+      return updatedCharacter;
+    } else {return character}
+  })
+  setOnePiece(newArray)
+}
+function updateJJKLikes(updatedCharacter){
+  const newArray = jjk.map((character) => {
+    if(character.id === updatedCharacter.id){
+      return updatedCharacter;
+    } else {return character}
+  })
+  setJJK(newArray)
+}
+
+function updateRimLikes({updatedCharacter}){
+  const newArray = rimuru.map((character) => {
+    if(character.id === updatedCharacter.id){
+      return updatedCharacter;
+    } else {return character}
+  })
+  setRimuru(newArray)
+}
 
   return (
     <>
       <header>
         <Navbar />
       </header> 
-      <Outlet context={{onepiece: onePiece, jjk: jjk, ttigraas: rimuru, setOne: setOne, setJjK: setJjk, setRimu: setRimu, url1: url1, url2: url2, url3: url3}}/>
+      <Outlet context={{onepiece: onePiece, jjk: jjk, ttigraas: rimuru, setOne: setOne, setJjK: setJjk, setRimu: setRimu, url1: url1, url2: url2, url3: url3, updateOPLikes: updateOPLikes, updateJJKLikes: updateJJKLikes, updateRimLikes: updateRimLikes}}/>
     </>
   );
 }
