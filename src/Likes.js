@@ -2,27 +2,19 @@ import { useEffect, useState } from "react";
 
 function Likes({likes, id, url, updateStates}){
     const [like, setLike] = useState(likes)
+    const link = `${url}/${id}`
 
     function likeButton(){
-        setLike(like + 1)
-        fetch(`${url}/${id}`,{
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-            likes: (like),
-            })
-        })
-        .then((r) => r.json())
-        .then((updatedCharacter) => updateStates(updatedCharacter))
-        .catch((error) => console.log(error))
+        setLike(like +1)
     }
 
 
     function disLikeButton(){
         setLike(like - 1)
-        fetch(`${url}/${id}`,{
+    }
+
+    useEffect(() => {
+        fetch(`${link}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -34,8 +26,7 @@ function Likes({likes, id, url, updateStates}){
         .then((r) => r.json())
         .then((updatedCharacter) => updateStates(updatedCharacter))
         .catch((error) => console.log(error))
-    }
-
+    }, [like])
 
     return (
         <div className="likes"> 
