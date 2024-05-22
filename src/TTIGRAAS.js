@@ -2,7 +2,7 @@ import { useOutletContext, useParams } from "react-router-dom";
 import Form from "./Form";
 
 function TTIGRAAS(){
-    const { ttigraas, setRimuru, url3 } = useOutletContext() 
+    const { ttigraas, setRimu, url3 } = useOutletContext() 
     
 
     const characterCards = ttigraas.map((character, index) => <div className="card" id={index} key={index}>
@@ -10,10 +10,6 @@ function TTIGRAAS(){
         <h2>{character.name}</h2>
     </div>
     )
-
-    function setRimu(character){
-        setRimuru([...ttigraas,character])
-    }
 
     return (
         <div >

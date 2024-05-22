@@ -11,16 +11,22 @@ function Navbar(){
             Home
             </NavLink>
             <NavLink
-            to="/american-league" 
+            to="/one-piece" 
             className="nav-link"
             >
-            American League    
+            One Piece     
             </NavLink>
             <NavLink
-            to="/national-league" 
+            to="/jujutsu-kaisen" 
             className="nav-link"
             >
-            National League
+            Jujutsu Kaisen
+            </NavLink>
+            <NavLink
+            to="/t-t-i-g-r-a-a-s" 
+            className="nav-link"
+            >
+            That Time I Got Reincarnated As A Slime    
             </NavLink>
         </nav>
     )

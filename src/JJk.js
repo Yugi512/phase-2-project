@@ -2,7 +2,7 @@ import { useOutletContext, useParams } from "react-router-dom";
 import Form from "./Form";
 
 function JJK(){
-    const { jjk, setJJK, url1 } = useOutletContext() 
+    const { jjk, setJjk, url1 } = useOutletContext() 
     
 
     const characterCards = jjk.map((character, index) => <div className="card" id={index} key={index}>
@@ -11,9 +11,6 @@ function JJK(){
     </div>
     )
 
-    function setJjk(character){
-        setJJK([...jjk,character])
-    }
 
     return (
         <div >

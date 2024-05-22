@@ -3,29 +3,51 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar"
 
 function App() {
-  const [americanLeague, setAmericanLeague] = useState([])
-  const [nationalLeague, setNationalLeague] = useState([])
+  const [onePiece, setOnePiece] = useState([])
+  const [jjk, setJJK] = useState([])
+  const [rimuru, setRimuru] = useState([])
   
+  const url1 = "http://localhost:3000/jujutsu-kaisen";
+  const url2 = "http://localhost:3000/one-piece";
+  const url3 = "http://localhost:3000/t-t-i-g-r-a-a-s"
+
   useEffect(()=> {
-      fetch("http://localhost:3000/american-league")
+      fetch(url1)
       .then((r) => r.json())
-      .then((americanTeams) => setAmericanLeague(americanTeams))
+      .then((character) => setJJK(character))
       .catch(error => console.log(error))
   },[])
   
   useEffect(()=> {
-      fetch("http://localhost:3000/national-league")
+      fetch(url2)
       .then((r) => r.json())
-      .then((nationalTeams) => setNationalLeague(nationalTeams))
+      .then((character) => setOnePiece(character))
       .catch(error => console.log(error))
   },[])
+  useEffect(()=> {
+    fetch(url3)
+    .then((r) => r.json())
+    .then((character) => setRimuru(character))
+    .catch(error => console.log(error))
+},[])
+
+function setOne(character){
+  setOnePiece([...onePiece,character])
+}
+function setJjk(character){
+  setJJK([...jjk,character])
+}
+function setRimu(character){
+  setRimuru([...rimuru,character])
+}
+
 
   return (
     <>
       <header>
         <Navbar />
       </header> 
-      <Outlet context={{american:americanLeague, national:nationalLeague}}/>
+      <Outlet context={{onepiece: onePiece, jjk: jjk, ttigraas: rimuru, setOne: setOne, setJjK: setJjk, setRimu: setRimu, url1: url1, url2: url2, url3: url3}}/>
     </>
   );
 }
