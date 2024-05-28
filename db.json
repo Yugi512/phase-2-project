@@ -36,31 +36,37 @@
       "id": 1,
       "name": "Monkey D. Luffy",
       "imgurl": "https://miro.medium.com/v2/resize:fit:1400/1*Y1hgWZZoMu96_7Tbi7z8fw.png",
-      "likes": 76
+      "likes": 85
     },
     {
       "id": 2,
       "name": "Roronoa Zoro",
       "imgurl": "https://cdn.oneesports.gg/cdn-data/2024/04/Anime_OnePiece_Zoro_Sword_Attack.jpg",
-      "likes": 65
+      "likes": 81
     },
     {
       "id": 3,
       "name": "Sanji",
       "imgurl": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/05/sanji-ifrit.jpg",
-      "likes": 58
+      "likes": 78
     },
     {
       "id": 4,
       "name": "Nami",
       "imgurl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c2a4fd09-561a-4019-b2c9-6461fa3db151/dempxz4-5e07373e-f886-414d-b58d-a07264d24f04.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MyYTRmZDA5LTU2MWEtNDAxOS1iMmM5LTY0NjFmYTNkYjE1MVwvZGVtcHh6NC01ZTA3MzczZS1mODg2LTQxNGQtYjU4ZC1hMDcyNjRkMjRmMDQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.u2o0sXMvBcW8sddXxgo97gOLPZTsnHEpfqhNMfCG85c",
-      "likes": 52
+      "likes": 70
     },
     {
       "id": 5,
       "name": "Nico Robin",
       "imgurl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c2a4fd09-561a-4019-b2c9-6461fa3db151/deliew1-3e5229fa-2212-4792-b8ce-9364c567b543.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MyYTRmZDA5LTU2MWEtNDAxOS1iMmM5LTY0NjFmYTNkYjE1MVwvZGVsaWV3MS0zZTUyMjlmYS0yMjEyLTQ3OTItYjhjZS05MzY0YzU2N2I1NDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.X1Rki4nLS3FQtnT9-yeMpSbFCX1TUF994D-A7Ws1o1k",
-      "likes": 50
+      "likes": 69
+    },
+    {
+      "name": "Usopp",
+      "imgurl": "https://i.pinimg.com/originals/d4/7b/3b/d47b3b692d9b8814d60d597cb303501d.png",
+      "likes": 64,
+      "id": 6
     }
   ],
   "t-t-i-g-r-a-a-s": [
@@ -68,7 +74,7 @@
       "id": 1,
       "name": "Rimuru Tempest",
       "imgurl": "https://i.pinimg.com/originals/9f/ec/b0/9fecb0df2e32bc20c7624adefee2390e.png",
-      "likes": 68
+      "likes": 71
     },
     {
       "id": 2,

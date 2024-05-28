@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 function Form({url, setArray}){
     const [newCharacter, setCharacter] = useState({
@@ -25,7 +25,7 @@ function Form({url, setArray}){
           body: JSON.stringify(newCharacter)
         })
         .then((r) => r.json())
-        .then((character) => setArray(character) )
+        .then((character) => setArray(character))
     }
     
 
