@@ -3,6 +3,11 @@
 
 The application I made displays the three anime that I enjoyed watching this season and they would be One Piece, Jujutsu kaisen, and That time I got reincarnated as a slime. Each anime has thier own component and in those components there are 5 characters being displayed. Each character has their own like and dislike button that changes the total amount of likes the character has. And at the top of this component there is a form that allows the user to input a new character which they would submit a name and image url for that character. 
 
+# How to Run 
+- fork and clone repo
+- run json-server --watch db.json
+- then run npm start to start the web app
+
 
 ## image links that are used for this project 
 image link for one piece https://i.pinimg.com/736x/c2/6d/f8/c26df8f4a80d935075b406669cbb5e7a.jpg\

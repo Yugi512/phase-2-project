@@ -1,13 +1,31 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import  "./style.css" 
 
 function Home(){
+    // have a controlled form that takes in input, it should have a counter
+    const [formData,setFormData] = useState("")
+    const [counter, setCounter] = useState(0)
 
+    function handleSubmit(e){
+        e.preventDefault()
+        
+        setCounter(counter => counter + formData.length)
+        setFormData("")
+    }
+    function handleChange(e){
+        setFormData(e.target.value)
+    }
 
     return (
         <div className="home">
             <h1 id="homepagetext" className="title">Home Page</h1>
             <main>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" value={formData} onChange={handleChange}/>
+                    <input type="submit"/>
+                </form>
+                <p>{counter}</p>
                 <div className="onepiece">
                     <img className="card-img" src="https://i.pinimg.com/736x/c2/6d/f8/c26df8f4a80d935075b406669cbb5e7a.jpg" alt="one-piece"></img>
                 <h2>

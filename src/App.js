@@ -11,30 +11,23 @@ function App() {
   const url2 = "http://localhost:3000/one-piece";
   const url3 = "http://localhost:3000/t-t-i-g-r-a-a-s"
 
-  useEffect(()=> {
-      fetch(url1)
+  function getCharacters(url,setterState){
+    fetch(url)
       .then((r) => r.json())
-      .then((character) => setJJK(character))
+      .then((characters) => setterState(characters))
       .catch(error => console.log(error))
-  },[])
-  
+  }
+
   useEffect(()=> {
-      fetch(url2)
-      .then((r) => r.json())
-      .then((character) => setOnePiece(character))
-      .catch(error => console.log(error))
+      getCharacters(url1,setJJK)
+      getCharacters(url2,setOnePiece)
+      getCharacters(url3,setRimuru)
   },[])
-  useEffect(()=> {
-    fetch(url3)
-    .then((r) => r.json())
-    .then((character) => setRimuru(character))
-    .catch(error => console.log(error))
-},[])
 
 function setOne(character){
   setOnePiece([...onePiece,character])
 }
-function setJJk(character){
+function setJjk(character){
   setJJK([...jjk,character])
 }
 function setRimu(character){
@@ -67,14 +60,18 @@ function updateRimLikes(updatedCharacter){
   setRimuru(newArray)
 }
 
+
   return (
     <>
       <header>
         <Navbar />
       </header> 
-      <Outlet context={{onepiece: onePiece, jjk: jjk, ttigraas: rimuru, setOne: setOne, setJJK: setJJk, setRimu: setRimu, url1: url1, url2: url2, url3: url3, updateOPLikes: updateOPLikes, updateJJKLikes: updateJJKLikes, updateRimLikes: updateRimLikes}}/>
+      <Outlet context={{onepiece: onePiece, jjk: jjk, ttigraas: rimuru, setOne: setOne, setJjk: setJjk, setRimu: setRimu, url1: url1, url2: url2, url3: url3, updateOPLikes: updateOPLikes, updateJJKLikes: updateJJKLikes, updateRimLikes: updateRimLikes}}/>
     </>
   );
+
+
 }
 
-export default App;
+
+export default App
