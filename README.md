@@ -5,7 +5,8 @@ The application I made displays the three anime that I enjoyed watching this sea
 
 # How to Run 
 - fork and clone repo
-- run json-server --watch db.json
+- in command line run npm install
+- run npx json-server --watch db.json
 - then run npm start to start the web app
 
 
