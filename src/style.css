@@ -1,3 +1,10 @@
+html{
+    background-image: linear-gradient(to bottom, #1F2937 , #2F3E53);
+}
+body{
+    color: #55F991;;
+}
+
 .home{
     display: inline-flexbox;
     text-align: center;
@@ -32,23 +39,23 @@
     padding: 0.35rem;
     text-decoration: none;
     font-size: 1.2em;
-    color: #1F45FC;
-    border-bottom: 2px solid #1F45FC;
+    color: #55F991;
+    border-bottom: 2px solid #55F991;
     transition: 0.1s;
     text-align: center;
 }
 .card{
     font-size: 30px;
     text-align: center;
-    border: #1F45FC solid 2px;
+    border: #55F991 solid 2px;
     padding: 2rem;
     width: auto;
     height: auto;
     display: grid;
     margin: 4rem 5rem;
-    box-shadow: 1.25rem 1.50rem #8a97d6;
-    background-color: white;
-    color: #5700f8;
+    box-shadow: 1.25rem 1.50rem #1F2937;
+    background-color: #2F3E53;
+    color: #55F991;
 }
 .cc{
     justify-self: center;
@@ -58,7 +65,7 @@
 .title{
     text-align: center;
     font-size: 60px;
-    color: #5700f8;
+    color: #55F991;
 }
 .form{
     display: inline-flexbox;
@@ -66,7 +73,7 @@
 }
 .input-text{
     background-color: white;
-    color: #5700f8;
+    color: #55F991;
     font-size: 18px;
     justify-self: center;
     font-family: 'Times New Roman', Times, serif;
@@ -78,7 +85,7 @@
 
 .submit{
     background-color: white;
-    color: #5700f8;
+    color: #55F991;
     font-size: 18px;
     justify-self: center;
     font-family: 'Times New Roman', Times, serif;
